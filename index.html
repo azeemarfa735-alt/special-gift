@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For ZUNURAN ❤️</title>
+<style>
+body{
+    margin:0;
+    overflow:hidden;
+    background: linear-gradient(to right,#ff758c,#ff7eb3);
+    font-family: Arial;
+    text-align:center;
+    color:white;
+}
+.container{
+    margin-top:150px;
+    animation: fadeIn 2s ease-in-out;
+}
+h1{font-size:50px;}
+button{
+    padding:15px 30px;
+    font-size:20px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff4d6d;
+    cursor:pointer;
+}
+button:hover{background:#ffe6eb;}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+/* Floating Hearts */
+.heart{
+    position:absolute;
+    color:red;
+    animation: float 5s linear infinite;
+    font-size:20px;
+}
+@keyframes float{
+    0%{transform:translateY(100vh); opacity:1;}
+    100%{transform:translateY(-10vh); opacity:0;}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>ZUNURAN ❤️</h1>
+    <h2>Welcome to our love world ✨</h2>
+    <button onclick="nextPage()">Enter My Heart 💌</button>
+</div>
+
+<script>
+function nextPage(){
+    window.location.href="second.html";
+}
+
+/* Generate Hearts */
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=Math.random()*20+15+"px";
+    document.body.appendChild(heart);
+    setTimeout(()=>{heart.remove();},5000);
+}
+setInterval(createHeart,300);
+</script>
+
+</body>
+</html>

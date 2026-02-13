@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Love ZUNURAN ❤️</title>
+<style>
+body{
+    background: linear-gradient(to right,#ff9a9e,#fad0c4);
+    font-family: Georgia;
+    padding:50px;
+    color:#5a0d2b;
+}
+h1{text-align:center;}
+#letter{
+    font-size:20px;
+    line-height:1.8;
+    white-space:pre-line;
+}
+.counter{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:18px;
+}
+</style>
+</head>
+<body>
+
+<h1>My Dearest ZUNURAN ❤️</h1>
+
+<div class="counter" id="daysTogether"></div>
+
+<div id="letter"></div>
+
+<script>
+
+/* Engagement Counter */
+const startDate=new Date("October 5, 2024");
+const today=new Date();
+const diff=Math.floor((today-startDate)/(1000*60*60*24));
+document.getElementById("daysTogether").innerHTML=
+"Humari engagement ko " + diff + " din ho chuke hain 💞";
+
+/* Typewriter Letter */
+const text=`ZUNURAN,
+
+Aap meri zindagi ka sabse khoobsurat hissa hain.
+Jab se aap meri zindagi mein aaye hain,
+har din ek nayi roshni ke saath shuru hota hai.
+
+5 October 2024 se lekar aaj tak,
+har lamha mere liye ek haseen yaad ban chuka hai.
+Ye hamara dusra Valentine hai,
+lekin mera pyaar aap ke liye har roz aur gehra hota ja raha hai.
+
+Aap sirf mere fiancé nahi hain,
+aap meri dua hain,
+meri khushi hain,
+meri aadat hain.
+
+Main apni poori zindagi aap ke saath guzarne ka khwab dekhti hoon.
+Mera dil sirf aap ka hai,
+aur hamesha aap ka hi rahega.
+
+Main aap se bepanah mohabbat karti hoon. ❤️`;
+
+let i=0;
+function typeWriter(){
+    if(i<text.length){
+        document.getElementById("letter").innerHTML+=text.charAt(i);
+        i++;
+        setTimeout(typeWriter,40);
+    }
+}
+typeWriter();
+
+</script>
+
+</body>
+</html>
